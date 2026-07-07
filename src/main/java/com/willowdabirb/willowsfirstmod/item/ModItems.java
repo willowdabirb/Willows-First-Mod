@@ -11,6 +11,8 @@ public class ModItems {
 
     public static final DeferredItem<Item> PERIDOT = ITEMS.register("peridot",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> PERIDOT_SHARDS = ITEMS.register("peridot_shards",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

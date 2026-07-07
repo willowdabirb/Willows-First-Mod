@@ -2,9 +2,11 @@ package com.willowdabirb.willowsfirstmod.block;
 
 import com.willowdabirb.willowsfirstmod.WillowsFirstMod;
 import com.willowdabirb.willowsfirstmod.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -14,7 +16,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(WillowsFirstMod.MOD_ID);
+    public static final DeferredRegister.Blocks BLOCKS =
+            DeferredRegister.createBlocks(WillowsFirstMod.MOD_ID);
 
 
     public static final DeferredBlock<Block> PERIDOT_BLOCK = registerBlock("peridot_block",
@@ -22,6 +25,26 @@ public class ModBlocks {
                     .strength(4f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.AMETHYST)
+            ));
+    public static final DeferredBlock<Block> PERIDOT_ORE = registerBlock("peridot_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2,4),
+                    BlockBehaviour.Properties.of()
+                            .strength(3f)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.STONE)
+            ));
+    public static final DeferredBlock<Block> PERIDOT_DEEPSLATE_ORE = registerBlock("peridot_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3,6),
+                    BlockBehaviour.Properties.of()
+                            .strength(4f)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.DEEPSLATE)
+            ));
+    public static final DeferredBlock<Block> WOOKIE_BLOCK = registerBlock("wookie_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(1f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.WOOL)
             ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

@@ -1,5 +1,13 @@
 {
   "itemGroup.willowsfirstmod": "Willow's First Mod",
   "item.willowsfirstmod.peridot": "Peridot",
-  "block.willowsfirstmod.peridot_block": "Block of Peridot"
+  "item.willowsfirstmod.peridot_shards": "Peridot Shards",
+
+  "block.willowsfirstmod.peridot_block": "Block of Peridot",
+  "block.willowsfirstmod.peridot_ore": "Peridot Ore",
+  "block.willowsfirstmod.peridot_deepslate_ore": "Deepslate Peridot Ore",
+  "block.willowsfirstmod.wookie_block": "Wookie Block",
+
+  "creativetab.willowsfirstmod.peridot_items": "Willow's Peridot Items",
+  "creativetab.willowsfirstmod.peridot_blocks": "Willow's Peridot Blocks"
 }

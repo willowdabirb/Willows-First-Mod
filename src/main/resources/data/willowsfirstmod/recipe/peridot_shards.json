@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "willowsfirstmod:peridot"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "willowsfirstmod:peridot_shards"
+  }
+}

@@ -1,6 +1,7 @@
 package com.willowdabirb.willowsfirstmod;
 
 import com.willowdabirb.willowsfirstmod.block.ModBlocks;
+import com.willowdabirb.willowsfirstmod.item.ModCreativeModeTabs;
 import com.willowdabirb.willowsfirstmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -37,6 +38,8 @@ public class WillowsFirstMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -55,9 +58,14 @@ public class WillowsFirstMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.PERIDOT);
+            event.accept(ModItems.PERIDOT_SHARDS);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.PERIDOT_BLOCK);
+        }
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.PERIDOT_ORE);
+            event.accept(ModBlocks.PERIDOT_DEEPSLATE_ORE);
         }
 
     }
